@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#007bff">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png">
+    <title>To-Do List</title>
+</head>
+<body>
+    <h1>To-Do List</h1>
+    
+    <div id="offline-indicator" class="offline-indicator">
+        You are currently offline. The app will continue to work.
+    </div>
+
+    <button id="install-button" class="install-button">INSTALL APP</button>
+
+    <div class="app-container">
+        <div class="input-toggle">
+            <button id="text-input-toggle" class="active">Text Input</button>
+            <button id="stylus-input-toggle">Handwritten Input</button>
+        </div>
+
+        <div id="text-input-section">
+            <div class="input-container">
+                <input type="text" id="task-input" placeholder="Add a new task..." autocomplete="off">
+                <button id="add-task-btn">Add</button>
+            </div>
+        </div>
+
+        <div id="stylus-input-section" style="display: none;">
+            <div class="drawing-container">
+                <div class="drawing-header">
+                    <h2>Write your task</h2>
+                </div>
+                <div class="canvas-controls">
+                    <button id="clear-canvas">Clear</button>
+                </div>
+                <div class="canvas-wrapper">
+                    <canvas id="drawing-canvas"></canvas>
+                </div>
+                <button id="add-drawing-task">Add Handwritten Note</button>
+            </div>
+        </div>
+
+        <h2>Tasks</h2>
+        <ul class="task-list" id="task-list">
+            <!-- Tasks will be added here -->
+        </ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
